@@ -1,0 +1,21 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en" class="bg_img">
+	<head>
+	    <meta charset="UTF-8">
+		<title>{% block title%}{% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+	</head>
+    <body>
+        <div class="dropdown-menu">
+            <a href="{% url 'index' %}" class="dropdown-item">Home</a>
+            <a href="{% url 'create' %}" class="dropdown-item">Create New Account</a>
+            <a href="{% url 'transaction' %}" class="dropdown-item">Add New Transaction</a>
+        </div>
+
+        {% include "footer.html" %}
+    </body>
+</html>
