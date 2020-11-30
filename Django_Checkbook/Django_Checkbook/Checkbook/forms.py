@@ -1,12 +1,13 @@
 from django.forms import ModelForm
-from.models import Product
+from . models import Account, Transaction
 
-class Account(ModelForm):
+
+class AccountForm(ModelForm):
     class Meta:
         model = Account
         fields = '__all__'
 
-class Transaction(ModelForm):
+class TransactionForm(ModelForm):
     class Meta:
         model = Transaction
         fields = '__all__'
